@@ -101,7 +101,7 @@ console.log(cacheAddition(10, 9)) // should print out: "19"
 console.log(cacheSubtraction(10, 5)) // should print out: "subtraction of 10 and 5" and "5"
 console.log(cacheSubtraction(10, 5)) // should print out: "5"
 
-/* 7. Check the code below and fix the bug complete withMetrics to make the final console.log
+/* 7. Check the code below, fix the bug and complete withMetrics to make the final console.log
 print out the expect result */
 const createRecipe = (name, instructions) => {
     return {

@@ -114,13 +114,27 @@ possibility.
 // The debounced function returned by debounce should wait until the delay time has passed before calling the callback function.
 // If the debounced function is called again within the delay time, the timer should be reset and the callback function should be called after the delay time has passed.
 // Your solution should be implemented in JavaScript without using any third-party libraries or frameworks. */
-const debounce = (callback, timer) => {
-  //Your code goes here
-};
+
+// const debounce = (callback, timer) => {
+//   let timeoutId;
+
+//   return function (...args) {
+//     clearTimeout(timeoutId);
+
+//     timeoutId = setTimeout(() => {
+//       callback.apply(this, args);
+//     }, timer);
+//   };
+// };
+
+// const debouncedCallback = debounce(
+//   () => console.log('this should print out only once'),
+//   1000
+// );
 
 // //This is the test code for the debounce function
 // for (let i = 0; i < 5; i++) {
-//   debounce(() => console.log('this should print out only once'), 1000);
+//   debouncedCallback();
 // }
 
 // /* 6. Create a function called cacheFunc that takes another function as an argument and returns a new function.
@@ -129,7 +143,17 @@ const debounce = (callback, timer) => {
 // The new function should have a cache property that stores the cached results. */
 
 // const cacheFunc = (callback) => {
-//   //Your code goes here
+//   const cache = {};
+//   return (...args) => {
+//     let argsKey = JSON.stringify(args);
+//     if (cache[argsKey]) {
+//       return cache[argsKey];
+//     } else {
+//       const result = callback(...args);
+//       cache[argsKey] = result;
+//       return result;
+//     }
+//   };
 // };
 
 // //This is the test code for cacheFunc
@@ -156,7 +180,7 @@ const debounce = (callback, timer) => {
 //   return {
 //     name,
 //     instructions,
-//     printInstructions: () => {
+//     printInstructions() {
 //       console.log(`Instructions for ${this.name}:`);
 //       console.log(
 //         this.instructions +
@@ -166,7 +190,13 @@ const debounce = (callback, timer) => {
 //   };
 // };
 
-// const withMetrics = (time, calories) => {};
+// const withMetrics = (time, calories) => {
+//   return (recipe) => {
+//     recipe.time = time;
+//     recipe.calories = calories;
+//     return recipe;
+//   };
+// };
 
 // const pancakeRecipe = withMetrics(
 //   30,
